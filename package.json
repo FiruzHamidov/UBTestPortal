@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Admin portal",
+  "main": "main.js",
+  "scripts": {
+    "init:store": "npx @unitybase/ubcli createStore -u admin -p admin",
+    "init:db": "npx @unitybase/ubcli initDB -drop -create -dba postgres -dbaPwd 12344321 -u admin -p admin -host http://localhost:8882",
+    "init:ddl": "npx @unitybase/ubcli generateDDL -u admin -p admin -host http://localhost:8882 -autorun",
+    "init:data": "npx @unitybase/ubcli initialize -u admin -p admin -host http://localhost:8882",
+    "init": "npm run init:store && npm run init:db && npm run init:ddl && npm run init:data"
+  },
+  "author": "Softengi",
+  "license": "ISC",
+  "dependencies": {
+    "@unitybase/adminui-pub": "^5.13.24",
+    "@unitybase/adminui-reg": "^5.4.24",
+    "@unitybase/adminui-vue": "^1.11.12",
+    "@unitybase/ub": "^5.5.6",
+    "@unitybase/ubcli": "^5.5.20",
+    "@unitybase/ubq": "^5.3.19"
+  },
+  "devDependencies": {}
+}

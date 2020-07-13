@@ -1,0 +1,9 @@
+{
+    "config": {
+      "ubmodel": {
+        "name": "requests"
+      }
+    },
+    "main": "req.js",
+    "name": "requests"
+  }

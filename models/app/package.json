@@ -1,0 +1,9 @@
+{
+  "config": {
+    "ubmodel": {
+      "name": "app"
+    }
+  },
+  "main": "main.js",
+  "name": "app"
+}

@@ -1,0 +1,25 @@
+{
+  "files.associations": {
+    "*.meta": "json",
+    "*.meta.en": "json",
+    "*.meta.ru": "json",
+    "*.meta.tg": "json"
+  },
+  "rainbow_csv.autodetect_separators": [";"],
+  "json.schemas": [{
+      "fileMatch": [
+          "*.meta"
+      ],
+      "url": "file:///H:/Projects/work/UBTestPortal/node_modules/@unitybase/ub/public/schemas/entity.schema.json"
+  }, {
+      "fileMatch": [
+          "ubConfig*.json"
+      ],
+      "url": "file:///H:/Projects/work/UBTestPortal/node_modules/@unitybase/ub/public/schemas/ubConfig.schema.json"
+  }, {
+      "fileMatch": [
+          "_schedulers.json"
+      ],
+      "url": "file:///H:/Projects/work/UBTestPortal/node_modules/@unitybase/ub/public/schemas/scheduler.config.schema.json"
+  }]
+}

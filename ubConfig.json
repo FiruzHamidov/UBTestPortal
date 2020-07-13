@@ -1,0 +1,91 @@
+{
+  "httpServer": {
+    "host": "*",
+    "port": "8882",
+    "inetPub": "./www",
+    "externalURL": "http://localhost:8882",
+    "reverseProxy": {}
+  },
+  "logging": {
+    "path": "./logs",
+    "levels": [
+      "*"
+    ]
+  },
+  "security": {
+    "authenticationMethods": [
+      "UB"
+    ]
+  },
+  "uiSettings": {
+    "adminUI": {
+      "applicationName": "t",
+      "applicationTitle": "t",
+      "defaultPasswordForDebugOnly": "admin",
+      "endpoint": "adm",
+      "loginURL": "/models/adminui-vue/views/ub-auth.html",
+      "vueAutoForms": true,
+      "useVueTables": true
+    }
+  },
+  "application": {
+    "defaultLang": "ru",
+    "domain": {
+      "models": [
+        { "path": "./node_modules/@unitybase/ub" },
+        { "path": "./node_modules/@unitybase/uba" },
+        { "path": "./node_modules/@unitybase/ubs" },
+        { "path": "./node_modules/@unitybase/ubm" },
+        { "path": "./node_modules/@unitybase/ub-pub" },
+        { "path": "./node_modules/@unitybase/adminui-pub" },
+        { "path": "./node_modules/@unitybase/adminui-reg" },
+        { "path": "./node_modules/@unitybase/adminui-vue" },
+
+        { "path": "./models/app" },
+        { "path": "./models/requests" }
+
+      ]
+    },
+    "connections": [
+      {
+        "name": "main",
+        "isDefault": true,
+        "supportLang": [ "ru", "en", "tg", "uk" ],
+        "driver": "PostgreSQL",
+        "dialect": "PostgreSQL",
+        "serverName": "postgresql://localhost:5432",
+        "databaseName": "cityportal",
+        "userID": "cityportal",
+        "password": "12345678",
+        "advSettings": "LibLocation=C:\\Program Files\\PostgreSQL\\9.5\\bin\\libpq.dll"
+      }
+    ],
+    "blobStores": [
+      {
+        "name": "mdb",
+        "path": "./stores/mdb",
+        "storeType": "Virtual"
+      },
+      {
+        "name": "avatars",
+        "storeSize": "Simple",
+        "path": "./stores/avatars",
+        "tempPath": "./stores/avatars/_temp"
+      },
+      {
+        "name": "photos",
+        "storeSize": "Simple",
+        "path": "./stores/avatars",
+        "tempPath": "./stores/avatars/_temp"
+      },
+      {
+        "name": "docs",
+        "storeSize": "Medium",
+        "path": "./stores/docs",
+        "tempPath": "./stores/docs/_temp",
+        "isDefault": true,
+        "historyDepth": 10
+      }
+    ]
+  }
+}
